@@ -32,3 +32,12 @@ There are some hardware vulnerabilities however that do require a software devel
 
 ## Software
 
+Software consists of all programs contributing to the execution of an operation. This includes operating systems, service software, maintainance software, administration software, package software or standard software and business software.
+
+There are an enormous amount of software vulnerabilities that are currently known. Apple's Secure Coding Guide does an excellent job categorizing and describing these vulnerabilities. They categorize software vulnerabilities as the following:
+ 1. Buffer Overflows
+ 2. Unvalidated Inputs
+ 3. Race Conditions
+ 4. Access-Control Problems
+ 5. Weakness in Authentication, Authorization, or Cryptographic Practices
+
