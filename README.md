@@ -40,17 +40,3 @@ There are an enormous amount of software vulnerabilities that are currently know
  3. Race Conditions
  4. Access-Control Problems
  5. Weakness in Authentication, Authorization, or Cryptographic Practices
-
-##
-
-graph TD
-
-A[Computer Vulnerabilities] --> B[Hardware]
-	A --> C[Software]
-	A --> D[Network]
-	C --> E[Buffer Overflows]
-	C --> E[Unvalidated Inputs]
-	C --> E[Race Conditions]
-	C --> E[Access-Control Problems]
-	C --> E[Weakness in Authentication, Authorization, or Crpytographic Practices]
-
