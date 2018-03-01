@@ -37,9 +37,9 @@ Software consists of all programs contributing to the execution of an operation.
 There are an enormous amount of software vulnerabilities that are currently known. Apple's Secure Coding Guide does an excellent job categorizing and describing these vulnerabilities. They categorize software vulnerabilities as the following:
  1. [Buffer Overflows](#buffer_overflows)
  2. [Unvalidated Inputs](#unvalidated_inputs)
- 3. Race Conditions
- 4. Access-Control Problems
- 5. Weakness in Authentication, Authorization, or Cryptographic Practices
+ 3. [Race Conditions](#race_conditions)
+ 4. [Access-Control Problems](#access-control_problems)
+ 5. [Weakness in Authentication, Authorization, or Cryptographic Practices](#weakness_in_authentication,_authorization,_or_cryptographic_problems)
 
 ### Buffer Overflows
 
@@ -52,4 +52,16 @@ A big culprit that causes buffer overflows is the use of the function "strcpy()"
 ### Unvalidated Inputs
 
 Always check inputs to your program. Don't assume that the inputs will always be reasonable. This includes all sorts of input fields such as text input, commands passed through a URL used to launch the program, audio, video, or graphics files provided by users or other processes and read by the program, command line input, any data read from an untrusted server over a network and any untrusted data read from a trusted server over a network (user-submitted HTML or photos on a bulletin board, for example).
+
+### Race Conditions
+
+If your program requires a certain order of execution to function properly and it breaks if it is executed out of order, that is a race condition. An attacker can exploit this property of your program to gain access to sensitive or unauthorized data segments of memory.
+
+To prevent race conditions, make use of proper method synchronizations and make your code fault tolerant.
+
+### Access-Control Problems
+
+There are many access control systems/mechanisms that are used when an application runs on a device. The operating system’s memory management system determines which parts of memory a program can access. Files on disk have permissions written to them telling the operating system to check before granting user access. Most of the time, problems in access control occur because the programmer doesn’t properly implement access control in their programs or they grant root permissions to the program. This creates a vulnerability because in case of a breach, the attacker can gain access to unauthorized sections of memory/files.
+
+### Weakness in Authentication, Authorization, or Cryptographic Practices
 
