@@ -15,7 +15,7 @@ A vulnerability can arise in many different areas of a system. We will categoriz
 The following is the categorization of vulnerabilities in an IT organization and the bold categories deal mainly with computer vulnerabilities:
  1. [**Hardware**](#hardware)
  2. [**Software**](#software)
- 3. **Network**
+ 3. [**Network**](#network)
  4. Personnel
  5. Physical Site
  6. Organizational
@@ -64,4 +64,20 @@ To prevent race conditions, make use of proper method synchronizations and make 
 There are many access control systems/mechanisms that are used when an application runs on a device. The operating system’s memory management system determines which parts of memory a program can access. Files on disk have permissions written to them telling the operating system to check before granting user access. Most of the time, problems in access control occur because the programmer doesn’t properly implement access control in their programs or they grant root permissions to the program. This creates a vulnerability because in case of a breach, the attacker can gain access to unauthorized sections of memory/files.
 
 ### Weakness in Authentication, Authorization, or Cryptographic Practices
+
+//Work in Progress
+
+## Network
+
+Making sure an organization’s network is secure is just as important as securing an application that runs on the organization’s servers. The end goal is always to secure information. An attacker that can get into a network can cause just as much harm as an attacker exploiting an application’s vulnerability.
+
+To ensure that your network is as strong and hard to penetrate, here are a few basic rules that must be followed:
+
+#### RULE #1: Choose a Strong Password
+
+To authenticate a user on a network, use a very strong password. Educate all users on the network to choose passwords that are virtually impregnable. Weak passwords that are about 7 or 8 characters in length can be [brute-force cracked](https://www.youtube.com/watch?v=7U-RbOKanYs) within a day with the current processing power at hand.
+
+Checkout this [video](https://www.youtube.com/watch?v=3NjQ9b3pgIg) on how to choose a password.
+
+#### RULE #2: Properly Configure Firewall Rules
 
