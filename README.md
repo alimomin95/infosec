@@ -81,3 +81,14 @@ Checkout this [video](https://www.youtube.com/watch?v=3NjQ9b3pgIg) on how to cho
 
 #### RULE #2: Properly Configure Firewall Rules
 
+“If it ain’t broke, why fix it” is not the right way to go about it when it comes to setting and configuring a network firewall. Networks are like a creature that morphs as time goes by. Some parts of the network get abandoned and forgotten but they still maintain high level access in the DMZ which attackers can use as an easy entry into an organizations information database.
+
+Regular review of firewall rules and network analysis is crucial to maintain a secure network.
+
+#### RULE #3: Update Devices/Endpoints
+
+>A network is as secure as it's weakest node
+
+A network is made up of multiple devices/endpoints. It just takes one to be vulnerable to an attack to compromise the network.
+
+It is important to apply patches and updates to all devices on the network to ensure network safety.
