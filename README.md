@@ -35,7 +35,7 @@ There are some hardware vulnerabilities however that do require a software devel
 Software consists of all programs contributing to the execution of an operation. This includes operating systems, service software, maintainance software, administration software, package software or standard software and business software.
 
 There are an enormous amount of software vulnerabilities that are currently known. Apple's Secure Coding Guide does an excellent job categorizing and describing these vulnerabilities. They categorize software vulnerabilities as the following:
- 1. [Buffer Overflows](buffer_overflows)
+ 1. [Buffer Overflows](#buffer_overflows)
  2. Unvalidated Inputs
  3. Race Conditions
  4. Access-Control Problems
@@ -48,4 +48,6 @@ A buffer overflow occurs when a computer program, while writing to a buffer or m
 
 
 A big culprit that causes buffer overflows is the use of the function "strcpy()", which copies a null terminated character array into a specified buffer. To prevent buffer overflows, programmers should always check length of the input parameters before using them and also making use of "strlcpy()" over "strcpy()" can prevent most buffer overflow attacks.
+
+### Unvalidated Inputs
 
