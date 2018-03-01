@@ -49,6 +49,8 @@ A buffer overflow occurs when a computer program, while writing to a buffer or m
 
 A big culprit that causes buffer overflows is the use of the function "strcpy()", which copies a null terminated character array into a specified buffer. To prevent buffer overflows, programmers should always check length of the input parameters before using them and also making use of "strlcpy()" over "strcpy()" can prevent most buffer overflow attacks.
 
+Check out this great [video](https://www.youtube.com/watch?v=1S0aBV-Waeo) on a buffer overflow attack.
+
 ### Unvalidated Inputs
 
 Always check inputs to your program. Don't assume that the inputs will always be reasonable. This includes all sorts of input fields such as text input, commands passed through a URL used to launch the program, audio, video, or graphics files provided by users or other processes and read by the program, command line input, any data read from an untrusted server over a network and any untrusted data read from a trusted server over a network (user-submitted HTML or photos on a bulletin board, for example).
@@ -87,8 +89,30 @@ Regular review of firewall rules and network analysis is crucial to maintain a s
 
 #### RULE #3: Update Devices/Endpoints
 
->A network is as secure as it's weakest node
+>A network is only as secure as it's weakest node
 
 A network is made up of multiple devices/endpoints. It just takes one to be vulnerable to an attack to compromise the network.
 
 It is important to apply patches and updates to all devices on the network to ensure network safety.
+
+## Summary and Next Steps
+
+This document should get you motivated to think about security when you write your computer programs. This guide is intended as a beginners guide to understanding and categorizing computer vulnerabilities. I suggest checking out further readings and sources I used below to write this guide to learn more in depth about computer vulnerabilities.
+
+## References
+
+[NIST - Risk Management Guide for Information Technology Systems](https://github.com/alimomin95/infosec/blob/master/sources/NIST%20-%20Information%20Security%20Guide%20for%20IT%20Systems.pdf)
+[A Structured Approach to Classifying Security Vulnerabilities - Robert C. Seacord and Allen Householder](https://github.com/alimomin95/infosec/blob/master/sources/A%20Structured%20Approach%20to%20Identifying%20Vulnerabilities.pdf)
+[BS ISO/IEC 27005:2008 - Information technology - Security techniques - Information security risk management](https://github.com/alimomin95/infosec/blob/master/sources/BS%20ISO:IEC%2027005:2008%20-%20p42.pdf)
+[National Vulnerability Database](https://nvd.nist.gov/vuln/categories)
+[OWASP Top 10 2013](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project#OWASP_Top_10_for_2013)
+[Web Application Security Stats](http://projects.webappsec.org/w/page/13246989/Web-Application-Security-Statistics#APPENDIX2ADDITIONALVULNERABILITYCLASSIFICATION)
+[Dumb Ideas in InfoSec](http://www.ranum.com/security/computer_security/editorials/dumb/)
+[Apple Security Practices](https://developer.apple.com/library/content/documentation/Security/Conceptual/SecureCodingGuide/Articles/TypesSecVuln.html)
+[The Top 5 Network Security Vulnerabilities](https://www.acunetix.com/blog/articles/the-top-5-network-security-vulnerabilities/)
+[Vulnerabilities in Network Systems](http://searchsecurity.techtarget.com/tip/Vulnerabilities-in-network-systems)
+[Meltdown and Spectre](https://www.theatlantic.com/technology/archive/2018/01/spectre-meltdown-cybersecurity/551147/)
+[Buffer Overflow Attacks](http://www.cse.scu.edu/~tschwarz/coen152_05/Lectures/BufferOverflow.html)
+[Validating Input and Interprocess Communication](https://developer.apple.com/library/content/documentation/Security/Conceptual/SecureCodingGuide/Articles/ValidatingInput.html)
+[Race Conditions and Secure File Operations](https://developer.apple.com/library/content/documentation/Security/Conceptual/SecureCodingGuide/Articles/RaceConditions.html#//apple_ref/doc/uid/TP40002585-SW1)
+[Broken Access Control](http://www.upenn.edu/computing/security/swat/SWAT_Top_Ten_A2.php)
