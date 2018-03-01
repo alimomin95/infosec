@@ -36,7 +36,7 @@ Software consists of all programs contributing to the execution of an operation.
 
 There are an enormous amount of software vulnerabilities that are currently known. Apple's Secure Coding Guide does an excellent job categorizing and describing these vulnerabilities. They categorize software vulnerabilities as the following:
  1. [Buffer Overflows](#buffer_overflows)
- 2. Unvalidated Inputs
+ 2. [Unvalidated Inputs](#unvalidated_inputs)
  3. Race Conditions
  4. Access-Control Problems
  5. Weakness in Authentication, Authorization, or Cryptographic Practices
@@ -50,4 +50,6 @@ A buffer overflow occurs when a computer program, while writing to a buffer or m
 A big culprit that causes buffer overflows is the use of the function "strcpy()", which copies a null terminated character array into a specified buffer. To prevent buffer overflows, programmers should always check length of the input parameters before using them and also making use of "strlcpy()" over "strcpy()" can prevent most buffer overflow attacks.
 
 ### Unvalidated Inputs
+
+Always check inputs to your program. Don't assume that the inputs will always be reasonable. This includes all sorts of input fields such as text input, commands passed through a URL used to launch the program, audio, video, or graphics files provided by users or other processes and read by the program, command line input, any data read from an untrusted server over a network and any untrusted data read from a trusted server over a network (user-submitted HTML or photos on a bulletin board, for example).
 
