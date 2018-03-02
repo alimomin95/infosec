@@ -45,7 +45,9 @@ There are an enormous amount of software vulnerabilities that are currently know
 
 A buffer overflow occurs when a computer program, while writing to a buffer or memory space, overruns and writes data outside a buffer's boundary and changes data held in adjacent memory locations. Buffer overflow attacks usually occur because of malformed inputs or functions not checking input lengths.
 
+To better understand how a buffer overflow attack works, we need to look at how a computer program is set up in the memory. 
 
+![alt text](https://he-s3.s3.amazonaws.com/media/uploads/383f472.png)
 
 A big culprit that causes buffer overflows is the use of the function "strcpy()", which copies a null terminated character array into a specified buffer. To prevent buffer overflows, programmers should always check length of the input parameters before using them and also making use of "strlcpy()" over "strcpy()" can prevent most buffer overflow attacks.
 
