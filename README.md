@@ -1,6 +1,6 @@
 # A Beginners Guide to Computer Vulnerabilities
 
-The primary purpose of this repo is to help new software developers who haven't been exposed to writing programs with a focus on information security. In school, assignments focus on functionality and thus most programmers overlook many vulnerabilities that can compromise sensitive information handled by their programs.
+The primary purpose of this repo is to motivate new software developers to think about vulnerabilities that might be present in their programs and how to remediate these vulnerabiliities. In school, assignments focus on functionality and thus most programmers overlook many vulnerabilities that can compromise sensitive information handled by their programs.
 
 
 ## What is a Computer Vulnerability?
@@ -10,7 +10,7 @@ There are numerous definitions by countless security organizations. I came up wi
 
 ## Classification of Computer Vulnerabilities
 
-A vulnerability can arise in many different areas of a system. We will categorize our vulnerabilities using the BS ISO/IEC 27005:2008. This standard categorizes vulnerabilities in general for an information technology organization but it encompasses all computer vulnerabilities.
+A vulnerability can arise in many different areas of a system. We will categorize our vulnerabilities using the BS ISO/IEC 27005:2008[<sup>[3]</sup>](https://github.com/alimomin95/infosec/blob/master/sources/BS%20ISO:IEC%2027005:2008%20-%20p42.pdf). This standard categorizes vulnerabilities in general for an information technology organization but it encompasses all computer vulnerabilities.
 
 The following is the categorization of vulnerabilities in an IT organization and the bold categories deal mainly with computer vulnerabilities:
  1. [**Hardware**](#hardware)
@@ -20,15 +20,19 @@ The following is the categorization of vulnerabilities in an IT organization and
  5. Physical Site
  6. Organizational
 
-We can see from above that these vulnerabilities arise in all three aspects of the PPT (People, Process, Technology) of an organization. Even though we will focus only on the process and technology aspects of these vulnerabilities, it is paramount for an organization to focus on all three to maximize the organization's information assurance.
+We can see from above that these vulnerabilities arise in all three aspects of the PPT (People, Process, Technology) of an organization. Even though we will focus only on the technology aspect of these vulnerabilities, it is paramount for an organization to focus on all three to maximize the organization's information assurance.
 
 ## Hardware
 
 Hardware consists of physical computer parts such as laptops, desktops, servers, printers, usb drives, external hard drives and etc.
 
-Hardware vulnerabilities described in the BS ISO/IEC 27005:2008 are things such as exposing computer hardware to unsuitable conditions such as operating the device outside the rated temperature ranges or flood damaging the equipment or maybe theft. These prevent these vulnerabilities, a software developer can't do much and it becomes the job of a system administrator to make sure bad things don't happen to hardware.
+Hardware vulnerabilities described in the BS ISO/IEC 27005:2008[<sup>[3]</sup>](https://github.com/alimomin95/infosec/blob/master/sources/BS%20ISO:IEC%2027005:2008%20-%20p42.pdf) are things such as exposing computer hardware to unsuitable conditions such as operating the device outside the rated temperature ranges or flood damaging the equipment or maybe theft. To prevent these vulnerabilities, a software developer can't do much and it becomes the job of a system administrator to make sure bad things don't happen to hardware.
 
-There are some hardware vulnerabilities however that do require a software developer to be aware of when writing their programs. Just last year, two huge vulnerabilities, Meltdown and Spectre, were discovered in the computer chips manufactured in the last 20 years. This vulnerability was different from the usual software vulnerabilities because this was a vulnerability in the computer hardware. Researchers found that these vulnerabilities can be worked around in software but it degraded the CPU perfomance by up to 25% in some cases. There is no absolute way to remediate these vulnerabilities besides buying new hardware that has been manufactured differently to correct this issue.
+There are some hardware vulnerabilities however that do require a software developer to be aware of when writing their programs. Just last year, two huge vulnerabilities, Meltdown and Spectre, were discovered in the computer chips manufactured in the last 20 years. These vulnerabilities were different from the usual software vulnerabilities because these were vulnerabilities in the computer hardware.
+
+When you write your computer program and run it on an operating system, your program is not the only process running. Modern computers are heavy multitaskers and CPU manufacturers know that. This is why they develop microprocessors that can execute code that they think might be executed next. This is called speculative execution and it is done because processors nowadays are so fast that they are usually left waiting for data to move in and out of memory. If the processor guesses correct, it is a performance gain, and if not, the calculation done preemptively is thrown out. All the results of the speculative execution are stored on the cache for the CPU and can be accessed by any running application on the system. This breaks the isolation of execution between processes and a malicious process can peek into cache and see sensitive data (encryption keys, passwords, etc) of another process.
+
+Researchers found that these vulnerabilities can be remediated in software but it degrades the CPU perfomance by up to 25% in some cases. There is no absolute way to remediate these vulnerabilities besides buying new hardware that has been manufactured differently to correct this issue.
 
 ## Software
 
@@ -45,9 +49,13 @@ There are an enormous amount of software vulnerabilities that are currently know
 
 A buffer overflow occurs when a computer program, while writing to a buffer or memory space, overruns and writes data outside a buffer's boundary and changes data held in adjacent memory locations. Buffer overflow attacks usually occur because of malformed inputs or functions not checking input lengths.
 
+To better understand how a buffer overflow attack works, we need to look at how a computer program is set up in the memory. See the figure below that shows the layout of a typical C program in memory. The stack region of the program's memory is used heavily to store local variables and return addresses of functions. A stack can only be accessed from the top using push and pop operations. Since variables for functions are stored on the stack along with return address, if the program copies content into the available buffer space allocated for a local variable and does not check the length of the data it is copying, it might overrun the available buffer space and write over the return address. This vulnerability can be used by an attacker by simply feeding the program a malicious string that overwrites the return address of the function to a program written by the attacker that can give him/her access to the system. This can become even worse if the vulnerable program runs with root or admin privileges because the attacker can spawn a shell with root or admin privileges. 
 
+![alt text](https://he-s3.s3.amazonaws.com/media/uploads/383f472.png)
 
 A big culprit that causes buffer overflows is the use of the function "strcpy()", which copies a null terminated character array into a specified buffer. To prevent buffer overflows, programmers should always check length of the input parameters before using them and also making use of "strlcpy()" over "strcpy()" can prevent most buffer overflow attacks.
+
+Modern compilers have also gotten smarter. When compiling the program, they add canary words that are checked before a return and if that memory location is changed, the program can detect if memory was overwritten.
 
 Check out this great [video](https://www.youtube.com/watch?v=1S0aBV-Waeo) on a buffer overflow attack.
 
