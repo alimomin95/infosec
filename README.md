@@ -10,7 +10,7 @@ There are numerous definitions by countless security organizations. I came up wi
 
 ## Classification of Computer Vulnerabilities
 
-A vulnerability can arise in many different areas of a system. We will categorize our vulnerabilities using the BS ISO/IEC 27005:2008[<sup>[3]</sup>](https://github.com/alimomin95/infosec/blob/master/sources/BS%20ISO:IEC%2027005:2008%20-%20p42.pdf). This standard categorizes vulnerabilities in general for an information technology organization but it encompasses all computer vulnerabilities.
+A vulnerability can arise in many different areas of a system. We will categorize our vulnerabilities using the BS ISO/IEC 27005:2008[<sup>[3]</sup>](https://github.com/alimomin95/infosec/blob/master/sources/BS%20ISO:IEC%2027005:2008%20-%20p42.pdf) standard. This standard categorizes vulnerabilities in general for an information technology organization and it encompasses all computer vulnerabilities.
 
 The following is the categorization of vulnerabilities in an IT organization and the bold categories deal mainly with computer vulnerabilities:
  1. [**Hardware**](#hardware)
@@ -26,7 +26,7 @@ We can see from above that these vulnerabilities arise in all three aspects of t
 
 Hardware consists of physical computer parts such as laptops, desktops, servers, printers, usb drives, external hard drives and etc.
 
-Hardware vulnerabilities described in the BS ISO/IEC 27005:2008[<sup>[3]</sup>](https://github.com/alimomin95/infosec/blob/master/sources/BS%20ISO:IEC%2027005:2008%20-%20p42.pdf) are things such as exposing computer hardware to unsuitable conditions such as operating the device outside the rated temperature ranges or flood damaging the equipment or maybe theft. To prevent these vulnerabilities, a software developer can't do much and it becomes the job of a system administrator to make sure bad things don't happen to hardware.
+Hardware vulnerabilities described in the BS ISO/IEC 27005:2008[<sup>[3]</sup>](https://github.com/alimomin95/infosec/blob/master/sources/BS%20ISO:IEC%2027005:2008%20-%20p42.pdf) standard are things such as exposing computer hardware to unsuitable conditions such as operating the device outside the rated temperature ranges or flood damaging the equipment or maybe theft. To prevent these vulnerabilities, a software developer can't do much and it becomes the job of a system administrator to make sure bad things don't happen to hardware.
 
 There are some hardware vulnerabilities however that do require a software developer to be aware of when writing their programs. Just last year, two huge vulnerabilities, Meltdown and Spectre, were discovered in the computer chips manufactured in the last 20 years. These vulnerabilities were different from the usual software vulnerabilities because these were vulnerabilities in the computer hardware.
 
