@@ -1,6 +1,6 @@
 # A Beginners Guide to Computer Vulnerabilities
 
-The primary purpose of this repo is to help new software developers who haven't been exposed to writing programs with a focus on information security. In school, assignments focus on functionality and thus most programmers overlook many vulnerabilities that can compromise sensitive information handled by their programs.
+The primary purpose of this repo is to motivate new software developers to think about vulnerabilities that might be present in their programs and how to remediate these vulnerabiliities. In school, assignments focus on functionality and thus most programmers overlook many vulnerabilities that can compromise sensitive information handled by their programs.
 
 
 ## What is a Computer Vulnerability?
@@ -26,9 +26,13 @@ We can see from above that these vulnerabilities arise in all three aspects of t
 
 Hardware consists of physical computer parts such as laptops, desktops, servers, printers, usb drives, external hard drives and etc.
 
-Hardware vulnerabilities described in the BS ISO/IEC 27005:2008[<sup>[3]</sup>](https://github.com/alimomin95/infosec/blob/master/sources/BS%20ISO:IEC%2027005:2008%20-%20p42.pdf) are things such as exposing computer hardware to unsuitable conditions such as operating the device outside the rated temperature ranges or flood damaging the equipment or maybe theft. These prevent these vulnerabilities, a software developer can't do much and it becomes the job of a system administrator to make sure bad things don't happen to hardware.
+Hardware vulnerabilities described in the BS ISO/IEC 27005:2008[<sup>[3]</sup>](https://github.com/alimomin95/infosec/blob/master/sources/BS%20ISO:IEC%2027005:2008%20-%20p42.pdf) are things such as exposing computer hardware to unsuitable conditions such as operating the device outside the rated temperature ranges or flood damaging the equipment or maybe theft. To prevent these vulnerabilities, a software developer can't do much and it becomes the job of a system administrator to make sure bad things don't happen to hardware.
 
-There are some hardware vulnerabilities however that do require a software developer to be aware of when writing their programs. Just last year, two huge vulnerabilities, Meltdown and Spectre, were discovered in the computer chips manufactured in the last 20 years. This vulnerability was different from the usual software vulnerabilities because this was a vulnerability in the computer hardware. Researchers found that these vulnerabilities can be worked around in software but it degraded the CPU perfomance by up to 25% in some cases. There is no absolute way to remediate these vulnerabilities besides buying new hardware that has been manufactured differently to correct this issue.
+There are some hardware vulnerabilities however that do require a software developer to be aware of when writing their programs. Just last year, two huge vulnerabilities, Meltdown and Spectre, were discovered in the computer chips manufactured in the last 20 years. These vulnerabilities were different from the usual software vulnerabilities because these were vulnerabilities in the computer hardware.
+
+When you write your computer program and run it on an operating system, your program is not the only process running. Modern computers are heavy multitaskers and CPU manufacturers know that. This is why they develop microprocessors that can execute code that they think might be executed next. This is called speculative execution and it is done because processors nowadays are so fast that they are usually left waiting for data to move in and out of memory. If the processor guesses correct, it is a performance gain, and if not, the calculation done preemptively is thrown out. All the results of the speculative execution are stored on the cache for the CPU and can be accessed by any running application on the system. This breaks the isolation of execution between processes and a malicious process can peek into cache and see sensitive data (encryption keys, passwords, etc) of another process.
+
+Researchers found that these vulnerabilities can be remediated in software but it degrades the CPU perfomance by up to 25% in some cases. There is no absolute way to remediate these vulnerabilities besides buying new hardware that has been manufactured differently to correct this issue.
 
 ## Software
 
