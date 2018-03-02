@@ -10,7 +10,7 @@ There are numerous definitions by countless security organizations. I came up wi
 
 ## Classification of Computer Vulnerabilities
 
-A vulnerability can arise in many different areas of a system. We will categorize our vulnerabilities using the BS ISO/IEC 27005:2008. This standard categorizes vulnerabilities in general for an information technology organization but it encompasses all computer vulnerabilities.
+A vulnerability can arise in many different areas of a system. We will categorize our vulnerabilities using the BS ISO/IEC 27005:2008[<sup>[3]</sup>](https://github.com/alimomin95/infosec/blob/master/sources/BS%20ISO:IEC%2027005:2008%20-%20p42.pdf). This standard categorizes vulnerabilities in general for an information technology organization but it encompasses all computer vulnerabilities.
 
 The following is the categorization of vulnerabilities in an IT organization and the bold categories deal mainly with computer vulnerabilities:
  1. [**Hardware**](#hardware)
