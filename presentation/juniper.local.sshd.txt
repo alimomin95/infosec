@@ -1,0 +1,43 @@
+juniper.local login failures:
+Jan 26 06:43:59 juniper sshd[43707]: Failed password for invalid user ftpadmin from 212.237.47.203 port 36268 ssh2
+Jan 26 06:43:59 juniper sshd[43707]: Connection closed by invalid user ftpadmin 212.237.47.203 port 36268 [preauth]
+Jan 26 06:44:52 juniper sshd[44228]: Failed password for invalid user ftpuser from 212.237.43.90 port 38152 ssh2
+Jan 26 06:44:52 juniper sshd[44228]: Connection closed by invalid user ftpuser 212.237.43.90 port 38152 [preauth]
+Jan 26 06:46:05 juniper sshd[44780]: Failed password for invalid user info from 212.237.46.229 port 51410 ssh2
+Jan 26 06:46:05 juniper sshd[44780]: Connection closed by invalid user info 212.237.46.229 port 51410 [preauth]
+Jan 26 06:47:03 juniper sshd[45169]: Failed password for invalid user informix from 212.237.46.247 port 40798 ssh2
+Jan 26 06:47:03 juniper sshd[45169]: Connection closed by invalid user informix 212.237.46.247 port 40798 [preauth]
+Jan 26 06:47:44 juniper sshd[45517]: Failed password for invalid user jboss from 212.237.40.85 port 54086 ssh2
+Jan 26 06:47:45 juniper sshd[45517]: Connection closed by invalid user jboss 212.237.40.85 port 54086 [preauth]
+Jan 26 09:57:43 juniper sshd[31737]: Failed password for invalid user oracle from 212.232.31.52 port 34081 ssh2
+Jan 26 09:57:43 juniper sshd[31737]: Connection closed by invalid user oracle 212.232.31.52 port 34081 [preauth]
+Jan 26 12:11:38 juniper sshd[92685]: Failed password for invalid user ftpadmin from 212.237.47.203 port 46804 ssh2
+Jan 26 12:11:38 juniper sshd[92685]: Connection closed by invalid user ftpadmin 212.237.47.203 port 46804 [preauth]
+Jan 26 12:13:34 juniper sshd[93522]: Failed password for invalid user info from 212.237.46.229 port 33714 ssh2
+Jan 26 12:13:34 juniper sshd[93522]: Connection closed by invalid user info 212.237.46.229 port 33714 [preauth]
+Jan 26 12:14:33 juniper sshd[93943]: Failed password for invalid user informix from 212.237.46.247 port 51326 ssh2
+Jan 26 12:14:34 juniper sshd[93943]: Connection closed by invalid user informix 212.237.46.247 port 51326 [preauth]
+Jan 26 12:15:24 juniper sshd[94386]: Failed password for invalid user jboss from 212.237.40.85 port 36386 ssh2
+Jan 26 12:15:25 juniper sshd[94386]: Connection closed by invalid user jboss 212.237.40.85 port 36386 [preauth]
+Jan 26 12:19:50 juniper sshd[96279]: Failed password for invalid user ftpuser from 212.237.43.90 port 48678 ssh2
+Jan 26 12:19:50 juniper sshd[96279]: Connection closed by invalid user ftpuser 212.237.43.90 port 48678 [preauth]
+Jan 26 12:52:54 juniper sshd[11377]: Failed password for invalid user java from 212.232.31.52 port 43565 ssh2
+Jan 26 12:52:54 juniper sshd[11377]: Connection closed by invalid user java 212.232.31.52 port 43565 [preauth]
+Jan 26 16:42:12 juniper sshd[16488]: Failed password for invalid user tomcat from 212.232.31.52 port 43897 ssh2
+Jan 26 16:42:12 juniper sshd[16488]: Connection closed by invalid user tomcat 212.232.31.52 port 43897 [preauth]
+Jan 26 17:39:26 juniper sshd[42470]: Failed password for invalid user ftpadmin from 212.237.47.203 port 56782 ssh2
+Jan 26 17:39:26 juniper sshd[42470]: Connection closed by invalid user ftpadmin 212.237.47.203 port 56782 [preauth]
+Jan 26 17:51:35 juniper sshd[47915]: Failed password for invalid user jboss from 212.237.40.85 port 47078 ssh2
+Jan 26 17:51:35 juniper sshd[47915]: Connection closed by invalid user jboss 212.237.40.85 port 47078 [preauth]
+Jan 26 18:46:22 juniper sshd[72725]: Failed password for invalid user tomcat from 212.232.31.52 port 50854 ssh2
+Jan 26 18:46:22 juniper sshd[72725]: Connection closed by invalid user tomcat 212.232.31.52 port 50854 [preauth]
+Jan 26 19:35:43 juniper sshd[95043]: Failed password for invalid user ftpuser from 212.237.43.90 port 58722 ssh2
+Jan 26 19:35:43 juniper sshd[95043]: Connection closed by invalid user ftpuser 212.237.43.90 port 58722 [preauth]
+Jan 26 20:27:59 juniper sshd[19051]: Failed password for invalid user informix from 212.237.46.247 port 33754 ssh2
+Jan 26 20:28:00 juniper sshd[19051]: Connection closed by invalid user informix 212.237.46.247 port 33754 [preauth]
+Jan 26 20:59:40 juniper sshd[33414]: Failed password for invalid user info from 212.237.46.229 port 43700 ssh2
+Jan 26 20:59:40 juniper sshd[33414]: Connection closed by invalid user info 212.237.46.229 port 43700 [preauth]
+Jan 26 23:35:01 juniper sshd[4132]: Failed password for invalid user tomcat from 212.232.31.52 port 58800 ssh2
+Jan 26 23:35:01 juniper sshd[4132]: Connection closed by invalid user tomcat 212.232.31.52 port 58800 [preauth]
+
+-- End of security output --
