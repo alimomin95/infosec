@@ -20,7 +20,7 @@ The following is the categorization of vulnerabilities in an IT organization and
  5. Physical Site
  6. Organizational
 
-We can see from above that these vulnerabilities arise in all three aspects of the PPT (People, Process, Technology) of an organization. Even though we will focus only on the process and technology aspects of these vulnerabilities, it is paramount for an organization to focus on all three to maximize the organization's information assurance.
+We can see from above that these vulnerabilities arise in all three aspects of the PPT (People, Process, Technology) of an organization. Even though we will focus only on the technology aspect of these vulnerabilities, it is paramount for an organization to focus on all three to maximize the organization's information assurance.
 
 ## Hardware
 
