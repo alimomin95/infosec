@@ -45,11 +45,13 @@ There are an enormous amount of software vulnerabilities that are currently know
 
 A buffer overflow occurs when a computer program, while writing to a buffer or memory space, overruns and writes data outside a buffer's boundary and changes data held in adjacent memory locations. Buffer overflow attacks usually occur because of malformed inputs or functions not checking input lengths.
 
-To better understand how a buffer overflow attack works, we need to look at how a computer program is set up in the memory. 
+To better understand how a buffer overflow attack works, we need to look at how a computer program is set up in the memory. See the figure below that shows the layout of a typical C program in memory. The stack region of the program's memory is used heavily to store local variables and return addresses of functions. A stack can only be accessed from the top using push and pop operations. Since variables for functions are stored on the stack along with return address, if the program copies content into the available buffer space allocated for a local variable and does not check the length of the data it is copying, it might overrun the available buffer space and write over the return address. This vulnerability can be used by an attacker by simply feeding the program a malicious string that overwrites the return address of the function to a program written by the attacker that can give him/her access to the system. This can become even worse if the vulnerable program runs with root or admin privileges because the attacker can spawn a shell with root or admin privileges. 
 
 ![alt text](https://he-s3.s3.amazonaws.com/media/uploads/383f472.png)
 
 A big culprit that causes buffer overflows is the use of the function "strcpy()", which copies a null terminated character array into a specified buffer. To prevent buffer overflows, programmers should always check length of the input parameters before using them and also making use of "strlcpy()" over "strcpy()" can prevent most buffer overflow attacks.
+
+Modern compilers have also gotten smarter. When compiling the program, they add canary words that are checked before a return and if that memory location is changed, the program can detect if memory was overwritten.
 
 Check out this great [video](https://www.youtube.com/watch?v=1S0aBV-Waeo) on a buffer overflow attack.
 
