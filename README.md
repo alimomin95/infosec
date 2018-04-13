@@ -1,6 +1,6 @@
 # A Beginners Guide to Computer Vulnerabilities
 
-The primary purpose of this repo is to motivate new software developers to think about vulnerabilities that might be present in their programs and how to remediate these vulnerabiliities. In school, assignments focus on functionality and thus most programmers overlook many vulnerabilities that can compromise sensitive information handled by their programs.
+The primary purpose of this repo is to motivate new software developers to think about vulnerabilities that might be present in their programs and how to remediate these vulnerabilities. In school, assignments focus on functionality and thus most programmers overlook many vulnerabilities that can compromise sensitive information handled by their programs.
 
 
 ## What is a Computer Vulnerability?
