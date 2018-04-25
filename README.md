@@ -75,7 +75,14 @@ There are many access control systems/mechanisms that are used when an applicati
 
 ### Weakness in Authentication, Authorization, or Cryptographic Practices
 
-//Work in Progress
+Do you remeber the Firefox plugin called Firesheep?
+Firesheep was a proof of concept plugin created by Eric Butler who showed a major weakness in online websites such Facebook, Flickr, Evernote, Amazon, Twitter and more. Most websites before 2010s used to only encrypt the users login session to authenticate the user and then once authenticated, the rest of the communication between the user and the servers was unencrypted and relied on IP address tied with cookies to keep the user logged in. This was not a big issue before WiFi was a commonplace and most computers were online through a hard wired connection but the rise of internet hotspots in Starbucks and McDonald's put most users at risk. Firesheep was essentially a packet sniffer that searched for unencrypted packets on a WiFi network and would allow the attacker to assume another person's identity who was on the network. Later all websites adopted the HTTPS protocol to fully encrypt all traffic from the user to ensure no information can be seen by simple packet sniffing. This was an important lesson for the tech community about the importance of Authentication, Authorization and using strong Cryptographic practices.
+
+Let's start with Authentication. Authentication is the process where you determine that the user on the other end is actually who they say they are. This is usually done through a username and password login. For added security, 2FA (Two Factor Authentication) is used where a user logging into a new device is required to enter a security code that is sent to them via a text message or a phone call. A key thing to remember when you are developing a web application that allows user accounts is to use HTTPS. This is essential because without any encryption in place, the user's username and password are sent over the network in plain text allowing attackers with packet sniffers to have their way with this kind of information.
+
+Have you been asked to enter your password again before making a purchase on Amazon or on the App Store? This is the Authorization step. Authorization is the process where you ask the user's permission to perform a certain task. When it comes to making/handling purchases, proper authorization to be in place is crucial. Apple used to have a big issue with having to refund users who claimed that their children purchased some apps on the App Store without their permission. Apple since then has gotten smarter and prompts users to enter their Apple password or authenticate with their fingerprint/face to authorize the purchase. When developing an application that can remember users logged in and keep them logged in, it becomes important to ask for authorization when performing certain tasks.
+
+Finally, lets talk about Cryptography. This subject might seem difficult and a bunch of math theorems but I assure you, all you need to know is this, imagine two machines, one machine takes in an object and spits out something unrecognizable (garbage), the other machine can take in this "garbage" and transforms it back into that original object. Cryptography allows use to encrypt messages and send them over an open network without anyone seeing what the message says. There are many ways of encrypting data but as computers become more and more powerful, older methods of encryption become less secure and breakable. This is why it is crucial for developers to stay up to date with new developments in this area and be aware of what technologies have become obsolete. Check out a very good entry on Cryptography on OWASP[<sup>[17]</sup>](ttps://www.owasp.org/index.php/Guide_to_Cryptography).
 
 ## Network
 
@@ -139,3 +146,7 @@ ___
 [Race Conditions and Secure File Operations](https://developer.apple.com/library/content/documentation/Security/Conceptual/SecureCodingGuide/Articles/RaceConditions.html#//apple_ref/doc/uid/TP40002585-SW1)
 
 [Broken Access Control](http://www.upenn.edu/computing/security/swat/SWAT_Top_Ten_A2.php)
+
+[Firesheep](https://github.com/codebutler/firesheep)
+
+[Guide to Crptography](https://www.owasp.org/index.php/Guide_to_Cryptography)
