@@ -164,3 +164,5 @@ ___
 [Man-in-the-middle Attacks - Hackerspace](https://hackerspace.kinja.com/how-to-defend-yourself-against-mitm-or-man-in-the-middl-1461796382)
 
 [Man-in-the-middle Attacks - Computerphile](https://www.youtube.com/watch?v=-enHfpHMBo4)
+
+[How to choose a password](https://www.youtube.com/watch?v=3NjQ9b3pgIg)
