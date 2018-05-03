@@ -84,6 +84,8 @@ Have you been asked to enter your password again before making a purchase on Ama
 
 Finally, lets talk about Cryptography. This subject might seem difficult and a bunch of math theorems but I assure you, all you need to know is this, imagine two machines, one machine takes in an object and spits out something unrecognizable (garbage), the other machine can take in this "garbage" and transforms it back into that original object. Cryptography allows use to encrypt messages and send them over an open network without anyone seeing what the message says. There are many ways of encrypting data but as computers become more and more powerful, older methods of encryption become less secure and breakable. This is why it is crucial for developers to stay up to date with new developments in this area and be aware of what technologies have become obsolete. Check out a very good entry on Cryptography on OWASP[<sup>[17]</sup>](https://www.owasp.org/index.php/Guide_to_Cryptography).
 
+Now that I have introduced encryption and cryptography, we can talk about Man-in-the-middle Attacks (MITM). I can try to explain MITM in a paragraph but I would suggest you'd rather go [here](https://www.youtube.com/watch?v=-enHfpHMBo4) for an excellent visual explaination of MITM Attacks. I assume you now know what MITM is and let's discuss how MITM can be mitigated. One way that was discussed in the video was using a Certificate Authority to validate public keys of the server you want to communicate with. This is done if your website forces users to HTTPS. This uses SSL to encrypt all traffic to your website using the certificate you registered with a Certificate Authority. Another way to keep your traffic encrpyted is to use a VPN. This will keep all your traffic encrpyted even if an attacker manages to get on your local network. 
+
 ## Network
 
 Making sure an organization’s network is secure is just as important as securing an application that runs on the organization’s servers. The end goal is always to secure information. An attacker that can get into a network can cause just as much harm as an attacker exploiting an application’s vulnerability.
@@ -150,3 +152,11 @@ ___
 [Firesheep](https://github.com/codebutler/firesheep)
 
 [Guide to Crptography](https://www.owasp.org/index.php/Guide_to_Cryptography)
+
+[Public-Private Key Cryptography - Computerphile](https://www.youtube.com/watch?v=GSIDS_lvRv4)
+
+[Man-in-the-middle Attacks - Veracode](https://www.veracode.com/security/man-middle-attack)
+
+[Man-in-the-middle Attacks - Hackerspace](https://hackerspace.kinja.com/how-to-defend-yourself-against-mitm-or-man-in-the-middl-1461796382)
+
+[Man-in-the-middle Attacks - Computerphile](https://www.youtube.com/watch?v=-enHfpHMBo4)
