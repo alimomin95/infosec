@@ -143,6 +143,8 @@ ___
 
 [Meltdown and Spectre](https://www.theatlantic.com/technology/archive/2018/01/spectre-meltdown-cybersecurity/551147/)
 
+[Meltdown and Spectre - Techquickie](https://www.youtube.com/watch?v=NArwG6yaWJ8)
+
 [Buffer Overflow Attacks](http://www.cse.scu.edu/~tschwarz/coen152_05/Lectures/BufferOverflow.html)
 
 [Buffer Overflow Attacks - Computerphile](https://www.youtube.com/watch?v=1S0aBV-Waeo)
